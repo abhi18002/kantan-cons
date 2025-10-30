@@ -178,3 +178,7 @@ export const SERVICES_DATA = [
 ];
 
 export const REQUIRED_MESSAGE = 'This is required';
+
+export default function Def() {
+  return;
+}
