@@ -146,7 +146,7 @@ a {
   text-align: center;
 }
 .underline{
-  width: 85%;
+  width: 100%;
   height: 3px;
   background-color: #5BA3D9;
   border-radius: 2px;
@@ -543,4 +543,28 @@ border-bottom: 1px solid #ff4d4f;}
 .card .bottom-section .row .item:nth-child(2) {
   border-left: 1px solid rgba(255, 255, 255, 0.126);
   border-right: 1px solid rgba(255, 255, 255, 0.126);
+}
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-top: -200px !important;
+  transform: scale(1.75);
+  padding: 5px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: black !important;
+  transform: scale(1.45);
+}
+
+/* Optional: make arrow icons slightly bigger */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 28px !important;
 }

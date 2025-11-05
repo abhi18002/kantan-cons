@@ -320,7 +320,7 @@ export default function Home() {
           <Space
             className='layout'
             style={{
-              height: '100vh',
+              height: '110vh',
             }}
             direction='vertical'
           >
@@ -329,10 +329,10 @@ export default function Home() {
             </div>
             <Space
               direction='vertical'
-              style={{ fontSize: '1.5rem' }}
+              style={{ fontSize: '1.6rem' }}
               ref={aboutTextRef}
             >
-              <p style={{ width: '1200px', textAlign: 'left' }}>
+              <p style={{ width: '1200px', textAlign: 'center' }}>
                 We are a specialized HR & Labour Compliance consultancy helping
                 organizations across industries stay legally compliant.
                 <br />
@@ -346,7 +346,7 @@ export default function Home() {
               <p
                 style={{
                   color: '#d6c7b0',
-                  fontSize: '1.2em',
+                  fontSize: '1.4em',
                   letterSpacing: '0.5px',
                   fontWeight: 600,
                   opacity: 0.9,
@@ -380,7 +380,7 @@ export default function Home() {
               </div>
               <Space
                 style={{
-                  textAlign: 'left',
+                  textAlign: 'center',
                   padding: '150px',
                   alignItems: 'flex-start',
                   marginTop: '10px',

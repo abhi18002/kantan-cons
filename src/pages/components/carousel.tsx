@@ -1,9 +1,10 @@
 'use client';
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Autoplay } from 'swiper/modules';
+import { EffectCoverflow, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
 import styles from './carousel.module.css';
 import { SLIDES } from '../constants';
 
@@ -13,18 +14,19 @@ const SketchCarousel: React.FC = () => {
   return (
     <Swiper
       effect='coverflow'
-      grabCursor
+      // grabCursor
       centeredSlides
       slidesPerView='auto'
       loop
       speed={1000}
-      spaceBetween={40} // 👈 add space between slides
+      spaceBetween={40}
       autoplay={{
         delay: 2200,
         disableOnInteraction: false,
         pauseOnMouseEnter: false,
         waitForTransition: true,
       }}
+      navigation
       coverflowEffect={{
         rotate: 20,
         stretch: 0,
@@ -32,7 +34,7 @@ const SketchCarousel: React.FC = () => {
         modifier: 1,
         slideShadows: false,
       }}
-      modules={[EffectCoverflow, Autoplay]}
+      modules={[EffectCoverflow, Autoplay, Navigation]}
       onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
     >
       {SLIDES.map((slide, index) => (

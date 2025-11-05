@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ant-design/icons": "5.x",
     "@vercel/node": "^5.3.26",
     "antd": "^5.27.4",
     "gsap": "^3.13.0",
