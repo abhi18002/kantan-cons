@@ -14,7 +14,7 @@ const SketchCarousel: React.FC = () => {
   return (
     <Swiper
       effect='coverflow'
-      // grabCursor
+      grabCursor
       centeredSlides
       slidesPerView='auto'
       loop

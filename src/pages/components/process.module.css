@@ -89,3 +89,59 @@
   background: linear-gradient(to bottom, #434242, #433e3c); 
   border-radius: 10px;
 }
+
+@media (max-width: 1024px) {
+ .content h3 {
+  font-size: 1.4rem;
+  width: 150px;
+}
+.content p {
+  margin:  0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.icon {
+  min-width: 70px;
+  min-height: 70px;
+font-size: 2rem;
+}
+}
+
+@media (max-width: 768px) {
+ .content h3 {
+  font-size: 1.4rem;
+  width: 150px;
+}
+.content p {
+  margin:  0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.icon {
+  min-width: 70px;
+  min-height: 70px;
+font-size: 2rem;
+}
+}
+
+@media (max-width: 480px) {
+ 
+.content h3 {
+  font-size: 1.4rem;
+  width: 150px;
+}
+.content p {
+  margin:  0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.icon {
+  min-width: 70px;
+  min-height: 70px;
+font-size: 2rem;
+}
+
+}

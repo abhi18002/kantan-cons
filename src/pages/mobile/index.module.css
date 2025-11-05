@@ -1,0 +1,241 @@
+.container,
+.layout,
+.about,
+.edge,
+.services,
+.industries,
+#contact,
+.services-section,
+.edge-cards-container,
+.mobile-view {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container {
+  height: max-content;
+  padding: 0;
+  position: relative;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.layout {
+  height: max-content;
+  padding-top: 50px;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  background-color: transparent;
+}
+
+.overlay {
+  position: relative;
+  z-index: 5;
+  padding: 0 20px;
+  background-color: transparent;
+}
+
+.navbar {
+  padding: 10px 20px;
+}
+
+.heading {
+  font-size: 2rem;
+}
+.heading p {
+  font-size: 2.8rem;
+}
+.ant-image-img {
+  height: 100px;
+}
+.subheading {
+  font-size: 1.2rem;
+}
+.text {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0 10px;
+}
+
+.about {
+  text-align: center;
+  font-size: 24px;
+  color: #f0f0f0;
+  background-color: #37486e;
+}
+
+.about-heading {
+  background: linear-gradient(to right, #d6c7b0, #d6c7b0) no-repeat center
+    bottom / 80px 3px;
+  color: #d6c7b0;
+  padding: 20px;
+  font-size: 24px;
+  margin: 30px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-family: 'Advent Pro', 'Bricolage Grotesque', Arial, Helvetica, sans-serif !important;
+}
+
+.about-content-text {
+  justify-content: space-between;
+}
+
+.about-sub-content {
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.underline {
+  width: 100%;
+  height: 3px;
+  background-color: #5ba3d9;
+  border-radius: 2px;
+}
+.svg-container {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.mission-vision {
+  margin: 20px;
+  margin-top: -20px;
+  font-size: 0.9em;
+}
+.edge {
+  padding: 30px 10px;
+  background-image: url('/edge.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.edge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+.edge > * {
+  position: relative;
+  z-index: 1;
+}
+
+.services {
+  background-color: #d1c2bc;
+  color: #48384c;
+  text-align: center;
+}
+
+.services-section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+  justify-content: space-between;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.service-heading {
+  margin-top: 60px;
+  background-color: #332a25;
+  color: white;
+  width: max-content;
+  height: 100px;
+  padding: 20px;
+  font-size: 24px;
+  font-family: 'Advent Pro', 'Bricolage Grotesque', Arial, Helvetica, sans-serif !important;
+}
+.service-item {
+  margin: 30px 0;
+  gap: 20px;
+  flex-direction: column;
+  transform: translateX(0);
+  text-align: center;
+}
+
+.service-image-wrapper {
+  position: relative;
+  flex: 0 0 600px;
+  max-width: 500px;
+  height: 300px;
+}
+
+.service-bg {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 120%;
+  z-index: 0;
+}
+
+.service-image {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.service-content {
+  width: 100%;
+  padding: 0 15px;
+}
+.service-content ul,
+.service-item.even .service-content ul {
+  text-align: left;
+  padding-left: 30px;
+}
+
+.industries {
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  overflow: hidden;
+  /* height: 800px; */
+  color: black;
+  background: radial-gradient(circle, #d2c2bc, #38486e);
+}
+.carousel-wrapper {
+  max-width: 350px !important;
+  width: 100% !important;
+  padding: 0 10px;
+}
+
+.contact-form {
+  margin: 30px;
+}
