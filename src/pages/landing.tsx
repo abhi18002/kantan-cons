@@ -241,6 +241,7 @@ export default function Landing() {
           preload='auto'
           className={'video'}
           ref={videoRef}
+          webkit-playsinline='true'
         >
           <source src='/ld1.mp4' type='video/mp4' />
         </video>
