@@ -14,15 +14,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: '/:path((?!sitemap).*).xml', // everything except sitemap
-        destination: '/some-destination',
-        permanent: true,
-      },
-    ];
-  },
   reactStrictMode: true,
   devIndicators: false,
   transpilePackages: [
