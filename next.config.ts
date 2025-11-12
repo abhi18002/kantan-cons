@@ -1,7 +1,28 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async headers() {
+    return [
+      {
+        source: '/sitemap(:any*)',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/xml',
+          },
+        ],
+      },
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: '/:path((?!sitemap).*).xml', // everything except sitemap
+        destination: '/some-destination',
+        permanent: true,
+      },
+    ];
+  },
   reactStrictMode: true,
   devIndicators: false,
   transpilePackages: [
