@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@ant-design/icons": "5.x",
@@ -15,6 +16,7 @@
     "gsap": "^3.13.0",
     "motion": "^12.23.24",
     "next": "15.5.4",
+    "next-sitemap": "^4.2.3",
     "nodemailer": "^7.0.9",
     "react": "19.1.0",
     "react-dom": "19.1.0",

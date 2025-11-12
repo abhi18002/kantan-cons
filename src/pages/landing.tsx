@@ -12,6 +12,7 @@ import Process from './components/process';
 import { useForm } from 'antd/es/form/Form';
 
 import HandBottom from './icons/hand_bottom';
+import Home from './components/home';
 
 export default function Landing() {
   const url = process.env.NEXT_PUBLIC_API_URL || '';
@@ -232,6 +233,7 @@ export default function Landing() {
   }, []);
   return (
     <>
+      <Home />
       <div className={'container'}>
         <video
           loop
@@ -278,7 +280,7 @@ export default function Landing() {
             <Space direction='vertical'>
               <div className={'heading'}>
                 <Image
-                  alt='KC'
+                  alt='Kantan Consultancy Logo'
                   src='/logo_light.png'
                   preview={false}
                   height={150}
@@ -326,7 +328,7 @@ export default function Landing() {
             direction='vertical'
           >
             <div className='about-heading about-text'>
-              <h1>About Us</h1>
+              <h2>About Us</h2>
             </div>
             <Space
               direction='vertical'
@@ -390,7 +392,7 @@ export default function Landing() {
                 size={150}
               >
                 <Space direction='vertical'>
-                  <h1>Our Mission</h1>
+                  <h2>Our Mission</h2>
                   <div className='underline' />
                   <br />
                   <p>
@@ -401,7 +403,7 @@ export default function Landing() {
                 </Space>
 
                 <Space direction='vertical'>
-                  <h1>Our Vision</h1>
+                  <h2>Our Vision</h2>
                   <div className='underline' />
                   <br />
                   <p>
@@ -508,7 +510,7 @@ export default function Landing() {
       <div className='services' id={'services'}>
         <Space direction='vertical' align='center' size='large'>
           <div className='service-heading'>
-            <h1>Our Services</h1>
+            <h2>Our Services</h2>
           </div>
           <div className='services-section'>
             {SERVICES_DATA.map((service, index) => (
@@ -559,9 +561,9 @@ export default function Landing() {
       <div className='industries' id={'industries'}>
         <Space direction='vertical' align='center' size='large'>
           <div>
-            <h1>
+            <h2>
               <strong>Industries We Serve</strong>{' '}
-            </h1>
+            </h2>
           </div>
           <h4>
             No matter your industry, our software-powered compliance solutions

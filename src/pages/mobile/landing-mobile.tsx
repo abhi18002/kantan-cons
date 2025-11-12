@@ -1,21 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 import { Space, Image, Form, Input, notification } from 'antd';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import TextArea from 'antd/lib/input/TextArea';
 import gsap from 'gsap';
 import { ScrollTrigger, MotionPathPlugin, DrawSVGPlugin } from 'gsap/all';
 import SketchCarousel from '../components/carousel';
-import { useRouter } from 'next/router';
 import { EDGE_POINTS, REQUIRED_MESSAGE, SERVICES_DATA } from '../constants';
 import Process from '../components/process';
 import { useForm } from 'antd/es/form/Form';
 import HandBottom from '../icons/hand_bottom';
 import styles from './index.module.css';
+import Home from '../components/home';
+import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 
 export default function LandingMobile() {
   const url = process.env.NEXT_PUBLIC_API_URL || '';
-  const router = useRouter();
   const [form] = useForm();
 
   const handleSubmit = async (formData: any) => {
@@ -193,9 +193,13 @@ export default function LandingMobile() {
 
     return () => clearTimeout(fallbackTimeout);
   }, []);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => setIsOpen((prev) => !prev);
 
   return (
     <>
+      <Home />
       <div
         className={`${styles['container']} ${styles['mobile-view']}`}
         style={{ overflowX: 'hidden' }}
@@ -213,28 +217,41 @@ export default function LandingMobile() {
         </video>
 
         <div className={styles['layout']}>
-          {/* <div className='nav-container'>
-            <input id='toggle' type='checkbox' />
+          <div className={styles['nav-container']}>
+            <input
+              type='checkbox'
+              id='toggle'
+              className={styles['toggle-checkbox']}
+              aria-label='Toggle navigation menu'
+              checked={isOpen}
+              onChange={handleToggle}
+            />
 
-            <label className='toggle-container' htmlFor='toggle'>
-              <span className='button button-toggle'></span>
+            <label htmlFor='toggle' className={styles['toggle-container']}>
+              {isOpen ? (
+                <CloseOutlined className={styles['toggle']} />
+              ) : (
+                <MenuOutlined className={styles['toggle']} />
+              )}
             </label>
-
-            <nav className='nav'>
-              <a className='nav-item' href=''>
-                Dashboard
+            <nav className={styles['nav']}>
+              <a className={styles['nav-item']} href='#about'>
+                About
               </a>
-              <a className='nav-item' href=''>
-                History
+              <a className={styles['nav-item']} href='#services'>
+                Services
               </a>
-              <a className='nav-item' href=''>
-                Statistics
+              <a className={styles['nav-item']} href='#industries'>
+                Industries
               </a>
-              <a className='nav-item' href=''>
-                Settings
+              <a className={styles['nav-item']} href='#process'>
+                Process
+              </a>
+              <a className={styles['nav-item']} href='#contact'>
+                Contact
               </a>
             </nav>
-          </div> */}
+          </div>
 
           <div className={styles['overlay']}>
             <Space

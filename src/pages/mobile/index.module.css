@@ -185,6 +185,7 @@
   flex-direction: column;
   transform: translateX(0);
   text-align: center;
+  will-change: transform, opacity;
 }
 
 .service-image-wrapper {
@@ -238,4 +239,53 @@
 
 .contact-form {
   margin: 30px;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.toggle-container {
+position: absolute;  
+cursor: pointer;
+  z-index: 50;
+  margin-top: 20px;
+  margin-left:120px;
+}
+
+.toggle {
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #213856;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  font-size: 30px;
+  padding: 50px;
+  display: none;
+  height: 500px;
+  z-index: 10;
+  color: white;
+}
+
+.toggle-checkbox:checked ~ .nav {
+  display: flex;
+  z-index: 15;
+}
+
+.toggle-checkbox:checked + .toggle-container .toggle {
+  transform: rotate(90deg);
+  color: white;
+    z-index: 5;
 }

@@ -248,7 +248,7 @@ background: radial-gradient(circle, #D2C2BC, #38486E);
   transform: translateX(-50px);
   transition: all 0.8s ease-out;
   text-align: left;
-
+ will-change: transform, opacity;
 }
 
 .service-item.even {
