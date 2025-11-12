@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://kantanconsultancy.com
+Host: https://www.kantanconsultancy.com
 
 # Sitemaps
-Sitemap: https://kantanconsultancy.com/sitemap.xml
+Sitemap: https://www.kantanconsultancy.com/sitemap.xml

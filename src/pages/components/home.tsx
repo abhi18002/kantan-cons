@@ -21,8 +21,8 @@ export default function Home() {
       <meta name='geo.placename' content='Coimbatore' />
       <meta name='geo.position' content='11.0168;76.9558' />
       <meta name='ICBM' content='11.0168, 76.9558' />
-      <meta property='og:url' content='https://kantanconsultancy.com' />
-      <link rel='canonical' href='https://kantanconsultancy.com' />
+      <meta property='og:url' content='https://www.kantanconsultancy.com' />
+      <link rel='canonical' href='https://www.kantanconsultancy.com' />
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{
@@ -30,8 +30,8 @@ export default function Home() {
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: 'Kantan Consultancy Pvt. Ltd.',
-            url: 'https://kantanconsultancy.com',
-            logo: 'https://kantanconsultancy.com/logo_light.png',
+            url: 'https://www.kantanconsultancy.com',
+            logo: 'https://www.kantanconsultancy.com/logo_light.png',
             contactPoint: {
               '@type': 'ContactPoint',
               telephone: '+91-9566628016',
