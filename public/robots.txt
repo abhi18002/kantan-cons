@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://kantanconsultancy.com
+
+# Sitemaps
+Sitemap: https://kantanconsultancy.com/sitemap.xml
