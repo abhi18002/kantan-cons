@@ -1,9 +1,12 @@
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
-import Landing from './landing';
-const LandingMobile = dynamic(() => import('./mobile/landing-mobile'), {
-  ssr: false,
-});
+import LandingPage from './home';
+const LandingMobile = dynamic(
+  () => import('../components/mobile/landing-mobile'),
+  {
+    ssr: false,
+  }
+);
 
 export default function Page() {
   const [isMobile, setIsMobile] = useState(false);
@@ -15,5 +18,5 @@ export default function Page() {
     return () => window.removeEventListener('resize', check);
   }, []);
 
-  return isMobile ? <LandingMobile /> : <Landing />;
+  return isMobile ? <LandingMobile /> : <LandingPage />;
 }
